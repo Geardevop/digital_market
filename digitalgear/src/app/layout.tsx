@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
+import Navbar from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       {/* 'relative flex flex-col min-h-screen' will ensure always full up page not looking wried */}
        <main className='relative flex flex-col min-h-screen'>
            {/* flex-grow will sure content will fill up as much as possible */}
+          <Navbar/>
           <div className='flex-grow flex-1'>{children}</div>
        </main>
       </body>
